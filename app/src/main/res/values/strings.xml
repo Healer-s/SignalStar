@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SignalStar</string>
+    <string name="channel_radar_service">雷达监听前台常驻</string>
+    <string name="channel_radar_service_desc">保证后台低功耗近场雷达持续感知与自动触发</string>
+    <string name="channel_trigger_notify">系统自动化触发通道</string>
+    <string name="channel_trigger_notify_desc">发送静默通知供系统模式/日常程序/Tasker拦截并执行自动化</string>
+
+    <!-- 三星日常程序与桌面快捷方式 -->
+    <string name="shortcut_start_agile">开启敏捷探测</string>
+    <string name="shortcut_start_agile_long">SignalStar: 开启敏捷探测</string>
+    <string name="shortcut_start_24h">开启24小时常驻</string>
+    <string name="shortcut_start_24h_long">SignalStar: 开启24小时后台常驻</string>
+    <string name="shortcut_stop_scan">停止探测 (休眠)</string>
+    <string name="shortcut_stop_scan_long">SignalStar: 停止探测并进入休眠</string>
+</resources>

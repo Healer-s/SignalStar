@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Top Sparkle Star -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 54,16.5 Q 54,21 58.5,21 Q 54,21 54,25.5 Q 54,21 49.5,21 Q 54,21 54,16.5 Z"/>
+
+    <!-- Left Outer Pulse Arc (White) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 34.4,30.64 A 30.5,30.5 0 0,0 34.4,77.36"/>
+
+    <!-- Right Outer Pulse Arc (White) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 73.6,30.64 A 30.5,30.5 0 0,1 73.6,77.36"/>
+
+    <!-- Left Inner Pulse Arc (Electric Cyan) -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 41.14,38.68 A 20,20 0 0,0 41.14,69.32"/>
+
+    <!-- Right Inner Pulse Arc (Electric Cyan) -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 66.86,38.68 A 20,20 0 0,1 66.86,69.32"/>
+
+    <!-- Central Plump Good Lock Golden Star (Warm Amber Yellow) -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M 54,40.5 Q 54,54 67.5,54 Q 54,54 54,67.5 Q 54,54 40.5,54 Q 54,54 54,40.5 Z"/>
+
+    <!-- Bottom Sparkle Star (Twinkle Cyan) -->
+    <path
+        android:fillColor="#67E8F9"
+        android:pathData="M 54,82.5 Q 54,87 58.5,87 Q 54,87 54,91.5 Q 54,87 49.5,87 Q 54,87 54,82.5 Z"/>
+</vector>

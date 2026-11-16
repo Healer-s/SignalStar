@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 快捷方式 1: 开启敏捷探测 (日常程序核心联动) -->
+    <shortcut
+        android:shortcutId="start_agile"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_start_agile"
+        android:shortcutLongLabel="@string/shortcut_start_agile_long">
+        <intent
+            android:action="com.clean.signalstar.ACTION_START_AGILE"
+            android:targetPackage="com.clean.signalstar"
+            android:targetClass="com.clean.signalstar.ui.ActionDispatcherActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <!-- 快捷方式 2: 开启 24 小时常驻 -->
+    <shortcut
+        android:shortcutId="start_24h"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_start_24h"
+        android:shortcutLongLabel="@string/shortcut_start_24h_long">
+        <intent
+            android:action="com.clean.signalstar.ACTION_START_24H"
+            android:targetPackage="com.clean.signalstar"
+            android:targetClass="com.clean.signalstar.ui.ActionDispatcherActivity" />
+    </shortcut>
+
+    <!-- 快捷方式 3: 停止探测并进入休眠 -->
+    <shortcut
+        android:shortcutId="stop_scan"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_stop_scan"
+        android:shortcutLongLabel="@string/shortcut_stop_scan_long">
+        <intent
+            android:action="com.clean.signalstar.ACTION_STOP"
+            android:targetPackage="com.clean.signalstar"
+            android:targetClass="com.clean.signalstar.ui.ActionDispatcherActivity" />
+    </shortcut>
+
+</shortcuts>

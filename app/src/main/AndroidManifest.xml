@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- BLE 权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" tools:targetApi="s" />
+
+    <!-- 定位权限 (BLE 距离感知与 Wi-Fi 扫描需要) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Wi-Fi 探测权限 (纯本地离线架构：不申请 INTERNET 网络权限，100% 物理隔绝联网) -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 通知与前台保活权限 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <!-- 硬件特征要求 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+
+    <application
+        android:name=".SignalStarApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SignalStar">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- 绑定桌面与三星日常程序 App Shortcuts -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!-- 三星日常程序与外部快捷方式无界面静默调度器 -->
+        <!-- 使用 windowIsFloating=true + taskAffinity=""，保证微信等前台界面绝不被顶退回桌面！ -->
+        <activity
+            android:name=".ui.ActionDispatcherActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SignalStar.Invisible"
+            android:taskAffinity=""
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:finishOnTaskLaunch="true">
+            <intent-filter>
+                <action android:name="com.clean.signalstar.ACTION_START_AGILE" />
+                <action android:name="com.clean.signalstar.ACTION_START_24H" />
+                <action android:name="com.clean.signalstar.ACTION_STOP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 前台感知与雷达探测服务 (stopWithTask="false" 确保最近任务点击“全部关闭”时绝不随界面一同关闭) -->
+        <service
+            android:name=".core.service.SignalRadarForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:foregroundServiceType="connectedDevice" />
+
+        <!-- 接收三星日常程序外部 Intent / 快捷方式触发器 -->
+        <receiver
+            android:name=".core.bridge.RoutineControlReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.clean.signalstar.ACTION_START_AGILE" />
+                <action android:name="com.clean.signalstar.ACTION_START_24H" />
+                <action android:name="com.clean.signalstar.ACTION_STOP" />
+                <action android:name="com.clean.signalstar.ACTION_START_SCAN" />
+                <action android:name="com.clean.signalstar.ACTION_STOP_SCAN" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机自启监听 (24 小时强制后台模式) -->
+        <receiver
+            android:name=".core.receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

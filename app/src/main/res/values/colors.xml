@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 三星 One UI 标志性配色 -->
+    <color name="samsung_blue">#2A67F6</color>
+    <color name="samsung_blue_dark">#1B4DC2</color>
+    <color name="samsung_blue_light">#EAF0FF</color>
+
+    <color name="oneui_bg_dark">#000000</color>
+    <color name="oneui_surface_dark">#18191B</color>
+    <color name="oneui_card_dark">#242528</color>
+    <color name="oneui_card_stroke_dark">#35373B</color>
+
+    <color name="oneui_bg_light">#F4F5F8</color>
+    <color name="oneui_surface_light">#FFFFFF</color>
+    <color name="oneui_card_light">#FFFFFF</color>
+    <color name="oneui_card_stroke_light">#E3E5EB</color>
+
+    <color name="signal_green">#10B981</color>
+    <color name="signal_yellow">#F59E0B</color>
+    <color name="signal_red">#EF4444</color>
+</resources>
