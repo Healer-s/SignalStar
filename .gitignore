@@ -13,6 +13,7 @@ app/build/
 *.aab
 *.jks
 *.keystore
+keystore/
 keystore.properties
 signing.properties
 
