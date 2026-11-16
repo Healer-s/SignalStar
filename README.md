@@ -19,6 +19,27 @@
 
 ---
 
+## 📱 界面预览
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./docs/screenshots/1_control.png" alt="控制中心" width="240"/><br/>
+      <sub><b>控制中心</b> · 三档功耗与状态总览</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./docs/screenshots/2_radar.png" alt="雷达嗅探" width="240"/><br/>
+      <sub><b>雷达嗅探</b> · 蓝牙主力 + 按需 Wi-Fi</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./docs/screenshots/3_rules.png" alt="感知规则库" width="240"/><br/>
+      <sub><b>感知规则库</b> · 实时测试与离线备份</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 1. SignalStar 主要做什么？（核心功能详细介绍）
 
 **SignalStar** 是一款专为手机系统自动化（如三星 **「模式与日常程序 (Modes & Routines)」**、Tasker、MacroDroid 等）打造的**外置近场信号雷达**。

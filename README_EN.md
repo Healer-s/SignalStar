@@ -19,6 +19,27 @@
 
 ---
 
+## 📱 Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./docs/screenshots/1_control.png" alt="Control Center" width="240"/><br/>
+      <sub><b>Control Center</b> · Power Modes &amp; Status</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./docs/screenshots/2_radar.png" alt="Radar Sniffer" width="240"/><br/>
+      <sub><b>Radar Sniffer</b> · BLE-First + On-Demand Wi-Fi</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./docs/screenshots/3_rules.png" alt="Sensing Rules" width="240"/><br/>
+      <sub><b>Sensing Rules</b> · Live Testing &amp; Backup</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 1. What Does SignalStar Do? (Feature Overview)
 
 **SignalStar** serves as an **external near-field signal radar** for Android automation tools such as **Samsung Modes & Routines**, **Tasker**, and **MacroDroid**.
