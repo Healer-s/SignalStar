@@ -13,6 +13,12 @@
 
 <br/>
 
+[![Download APK](https://img.shields.io/badge/📥%20Download%20APK-v1.0.0%20(1.6MB)-success?style=for-the-badge&logo=android)](https://github.com/Healer-s/SignalStar/raw/main/release/SignalStar-v1.0.0-release.apk)
+
+**[Download from GitHub](https://github.com/Healer-s/SignalStar/raw/main/release/SignalStar-v1.0.0-release.apk)** · **[Download from Gitee Mirror](https://gitee.com/healer1012/SignalStar/raw/main/release/SignalStar-v1.0.0-release.apk)** · **[Browse release/ folder](./release)**
+
+<br/>
+
 <img src="./docs/signalstar-demo.svg" alt="SignalStar Near-Field Sensing Animated Demo" width="100%"/>
 
 </div>

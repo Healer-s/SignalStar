@@ -13,6 +13,12 @@
 
 <br/>
 
+[![Download APK](https://img.shields.io/badge/📥%20下载%20APK-v1.0.0%20(1.6MB)-success?style=for-the-badge&logo=android)](https://gitee.com/healer1012/SignalStar/raw/main/release/SignalStar-v1.0.0-release.apk)
+
+**[国内 Gitee 快速下载](https://gitee.com/healer1012/SignalStar/raw/main/release/SignalStar-v1.0.0-release.apk)** · **[GitHub 备用下载](https://github.com/Healer-s/SignalStar/raw/main/release/SignalStar-v1.0.0-release.apk)** · **[浏览 release 目录](./release)**
+
+<br/>
+
 <img src="./docs/signalstar-demo.svg" alt="SignalStar 动态工作原理演示" width="100%"/>
 
 </div>
